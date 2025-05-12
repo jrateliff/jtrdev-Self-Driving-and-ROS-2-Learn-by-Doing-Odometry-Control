@@ -37,14 +37,14 @@ def generate_launch_description():
         }.items()
     )
 
-    imu_driver_node = Node(
-        package="bumperbot_firmware",
-        executable="mpu6050_driver.py"
-    )
+    # imu_driver_node = Node(
+    #    package="bumperbot_firmware",
+    #    executable="mpu6050_driver.py"
+    # )
     
     return LaunchDescription([
         hardware_interface,
         controller,
         joystick,
-        imu_driver_node,
+    #    imu_driver_node,
     ])

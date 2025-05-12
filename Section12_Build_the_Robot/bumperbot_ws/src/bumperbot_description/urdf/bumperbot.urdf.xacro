@@ -193,4 +193,23 @@
     <axis xyz="0 0 0" />
   </joint>
 
+<ros2_control name="BumperbotSystem" type="system">
+  <hardware>
+    <plugin>bumperbot_firmware/BumperbotSystemHardware</plugin>
+  </hardware>
+
+  <joint name="wheel_left_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
+  </joint>
+
+  <joint name="wheel_right_joint">
+    <command_interface name="velocity"/>
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
+  </joint>
+</ros2_control>
+
+
 </robot>

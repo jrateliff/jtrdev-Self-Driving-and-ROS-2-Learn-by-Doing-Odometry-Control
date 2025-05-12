@@ -5,12 +5,14 @@ joy_teleop:
       interface_type: geometry_msgs/msg/TwistStamped
       topic_name: bumperbot_controller/cmd_vel
       deadman_buttons: [5]
+
       axis_mappings:
         twist-linear-x:
-          axis: 1
-          scale: 1.0
+          axis: 1       # Up/down on left stick
+          scale: 0.4    # Reduced linear speed for better control
           offset: 0.0
+
         twist-angular-z:
-          axis: 3
-          scale: 8.0
+          axis: 2       # Left/right on right stick (was axis 3 in your setup)
+          scale: 1.5    # Reduced turning speed for smoother turning
           offset: 0.0
